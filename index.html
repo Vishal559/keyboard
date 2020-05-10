@@ -123,6 +123,70 @@
     </div>
     
 </body>
+    <script type="text/javascript">
+    let capslock=0;
+    let shift=0;
+    function capital()
+    {
+        capslock=capslock+1;
+    
+        if(capslock%2!=0)
+        {
+            console.log(capslock)
+            document.getElementById('light').style.backgroundColor='white';
+
+            
+        }
+        else{
+            document.getElementById('light').style.backgroundColor='rgb(231, 224, 224)';
+        }
+    }
+    function Output(letter)
+    {
+            if(capslock%2!=0)
+            {
+            document.getElementById('output').value+=letter.toUpperCase();
+            }
+            else
+            {
+            document.getElementById('output').value+=letter;
+            }
+    }
+    function num(number)
+    {
+        document.getElementById('output').value+=number;
+    }
+    function tab()
+    {
+        document.getElementById('output').value+='    ';
+    }
+    function enter()
+    {
+        document.getElementById('output').value+='\n';
+    }
+    function space()
+    {
+        document.getElementById('output').value+=' ';
+    }
+    function backspace()
+    {
+        let str=document.getElementById('output').value;
+        document.getElementById('output').value=str.substr(0,str.length-1);
+    }
+    function diffOutput()
+    {
+        document.getElementById('output').value+="'";
+
+    }
+    function diff2Output()
+    {
+        document.getElementById('output').value+='\\';
+
+    }
+
+
+</script>
+
     
 
 
